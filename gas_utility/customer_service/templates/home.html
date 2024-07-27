@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome to the Gas Utility Service Portal</h2>
+<p><a href="{% url 'submit_request' %}">Submit a new service request</a></p>
+<p><a href="{% url 'service_request_list' %}">View your service requests</a></p>
+{% endblock %}

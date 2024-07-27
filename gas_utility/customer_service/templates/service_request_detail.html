@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Service Request Details</h2>
+<p>Type: {{ service_request.request_type }}</p>
+<p>Details: {{ service_request.details }}</p>
+<p>Status: {{ service_request.status }}</p>
+<p>Submitted At: {{ service_request.submitted_at }}</p>
+<p>Resolved At: {{ service_request.resolved_at }}</p>
+{% if service_request.attachment %}
+<p>Attachment: <a href="{{ service_request.attachment.url }}" Download>Download</a></p>
+{% endif %}
+{% endblock %}
